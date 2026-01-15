@@ -63,5 +63,70 @@
       "Bacharelado em Sistemas de Informação - FESPPR (2021)",
       "Pós-graduação em Cibersegurança - PUCPR (2025)"
     ]
+  },
+  "curriculum": {
+    "title": "Experiência Profissional",
+    "subtitle": "Minha jornada de carreira em DevOps e TI",
+    "current": "Atual",
+    "experience": {
+      "vwb": {
+        "position": "Arquiteto de TI",
+        "description": "Liderando iniciativas de arquitetura de TI.",
+        "highlights": [
+          "Desenvolvimento de arquiteturas de soluções para projetos internos e clientes",
+          "Colaboração com equipes multifuncionais para garantir a implementação bem-sucedida das soluções propostas"
+        ]
+      },
+      "landis": {
+        "position": "Engenheiro DevOps Sênior",
+        "description": "Liderando iniciativas DevOps e gerenciamento de infraestrutura para soluções empresariais.",
+        "highlights": [
+          "Implantação de ambientes padrão contendo recursos GCP como Kubernetes, instâncias e armazenamento",
+          "Manutenção de pipelines GitLab, melhorando tempo de execução e lógica de negócios",
+          "Desenvolvimento de scripts de automação com Bash, Python e PowerShell para alcançar configuração confiável",
+          "Disseminação da cultura DevOps em toda a equipe de desenvolvimento"
+        ]
+      },
+      "freelancer": {
+        "position": "Consultor DevOps",
+        "description": "Fornecendo serviços de consultoria DevOps para diversos clientes.",
+        "highlights": [
+          "Responsável por manter, implantar e automatizar processos",
+          "Migração de aplicações de provedores privados para Azure, melhorando o desempenho da equipe de desenvolvimento com pipelines, scripts de automação e design de arquitetura utilizando Kubernetes e CDN"
+        ]
+      },
+      "trimble": {
+        "position": "Engenheiro DevOps",
+        "description": "Construindo e mantendo infraestrutura de plataforma para apoiar equipes de desenvolvimento.",
+        "highlights": [
+          "Manutenção de pipelines, infraestrutura e construção de uma equipe de plataforma para ajudar desenvolvedores a prosperarem",
+          "Implantação de infraestrutura usando Terraform e Terragrunt",
+          "Trabalho com todos os principais provedores de nuvem para entregar a melhor experiência para a equipe de desenvolvimento"
+        ]
+      },
+      "arauco2": {
+        "position": "Analista de Suporte",
+        "description": "Administração de redes e gerenciamento de infraestrutura.",
+        "highlights": [
+          "Administrador de rede lidando com regras de firewall, gerenciamento de rede, projetos de melhoria e posicionamento de Wi-Fi",
+          "Configurações de rede importantes relacionadas a servidores Azure, preparando e segmentando redes Azure para conexões VPN"
+        ]
+      },
+      "arauco1": {
+        "position": "Assistente Administrativo",
+        "description": "Administração de redes e telefonia.",
+        "highlights": [
+          "Melhoria e gerenciamento de soluções de telefonia e rede",
+          "Gerenciamento de faturas de provedores e carregamento de informações no SAP"
+        ]
+      },
+      "intern": {
+        "position": "Estagiário",
+        "description": "Suporte de TI e gerenciamento de dispositivos.",
+        "highlights": [
+          "Gerenciamento e reparo de computadores e dispositivos. Participação ativa em projeto de atualização de software de balanças"
+        ]
+      }
+    }
   }
 }

@@ -31,7 +31,12 @@ const props = defineProps<{
     <v-card-subtitle> {{ props.subtitle }} </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn color="orange-lighten-2" :text="$t('projects.button.explore')"></v-btn>
+      <v-btn
+        color="orange-lighten-2"
+        @click="show = !show"
+        :ripple="false"
+        :text="$t('projects.button.explore')"
+      ></v-btn>
 
       <v-spacer></v-spacer>
 
