@@ -67,7 +67,9 @@
   },
   "curriculum": {
     "title": "Professional Experience",
-    "subtitle": "My career journey in DevOps and IT",
+    "subtitle": "My career as DevOps and IT",
+    "summary": "I constantly seek to expand my skills and knowledge in DevSecOps, development and architecture. Spreading the DevOps culture and promoting security practices throughout all stages of the software development lifecycle.",
+    "stack": "Tech Stack",
     "current": "Current",
     "experience": {
       "vwb": {
@@ -75,7 +77,9 @@
         "description": "Leading IT architecture initiatives.",
         "highlights": [
           "Developing solution architectures for internal projects and clients",
-          "Collaborating with cross-functional teams to ensure successful implementation of proposed solutions"
+          "Collaborating with cross-functional teams to ensure successful implementation of proposed solutions",
+          "Setting up and managing local Kubernetes Cluster and AWS EKS",
+          "Implementing CI/CD pipelines using GitHub Actions and Terraform for infrastructure automation"
         ]
       },
       "landis": {

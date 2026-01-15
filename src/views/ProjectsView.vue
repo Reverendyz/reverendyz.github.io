@@ -8,17 +8,19 @@ const cards = [
   },
   {
     id: 'dns-c',
-    imgSrc: 'https://avatars.githubusercontent.com/u/48569886?v=4',
+    imgSrc:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/500px-C_Programming_Language.svg.png',
     url: 'https://github.com/Reverendyz/dns-c',
   },
   {
     id: 'blockchain-example',
-    imgSrc: 'https://avatars.githubusercontent.com/u/48569886?v=4',
+    imgSrc:
+      'https://bernardmarr.com/img/What%20Is%20Blockchain%20A%20Super%20Simple%20Guide%20Anyone%20Can%20Understand.png',
     url: 'https://github.com/Reverendyz/blockchain-example',
   },
   {
     id: 'adocli',
-    imgSrc: 'https://avatars.githubusercontent.com/u/48569886?v=4',
+    imgSrc: 'https://miro.medium.com/0*2Xt3M12GK4fbPO71.png',
     url: 'https://github.com/Reverendyz/adocli',
   },
 ]
@@ -40,11 +42,13 @@ const cards = [
       <v-col
         v-for="card in cards"
         :key="card.id"
-        cols="6"
-        md="4"
+        lg="4"
+        md="6"
+        sm="12"
+        xl="12"
         class="text-center mb-4 mb-sm-8 px-2 px-sm-4"
       >
-        <ProjectsCard
+        <projects-card
           :title="$t(`projects.cards.${card.id}.title`)"
           :subtitle="$t(`projects.cards.${card.id}.subtitle`)"
           :text="$t(`projects.cards.${card.id}.text`)"
