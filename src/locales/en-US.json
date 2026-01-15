@@ -13,7 +13,8 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "theme": "Theme"
+    "theme": "Theme",
+    "curriculum": "Curriculum"
   },
   "projects": {
     "title": "My Projects",
@@ -63,5 +64,70 @@
       "Bachelor's Degree in Information Systems - FESPPR (2021)",
       "Postgraduate in Cybersecurity - PUCPR (2025)"
     ]
+  },
+  "curriculum": {
+    "title": "Professional Experience",
+    "subtitle": "My career journey in DevOps and IT",
+    "current": "Current",
+    "experience": {
+      "vwb": {
+        "position": "IT Architect",
+        "description": "Leading IT architecture initiatives.",
+        "highlights": [
+          "Developing solution architectures for internal projects and clients",
+          "Collaborating with cross-functional teams to ensure successful implementation of proposed solutions"
+        ]
+      },
+      "landis": {
+        "position": "Sr DevOps Engineer",
+        "description": "Leading DevOps initiatives and infrastructure management for enterprise solutions.",
+        "highlights": [
+          "Deploy standard environments containing GCP resources as Kubernetes, instances and storage",
+          "Maintain GitLab pipelines, improving execution time and business logic",
+          "Developed automation scripts with Bash, Python, and PowerShell to achieve reliable configuration",
+          "Spread DevOps culture throughout the development team"
+        ]
+      },
+      "freelancer": {
+        "position": "DevOps Consultant",
+        "description": "Providing DevOps consulting services for various clients.",
+        "highlights": [
+          "Responsible for maintaining, deploying, and automating processes",
+          "Moved applications from private providers to Azure, improving dev team performance with pipelines, automation scripts, and architecture design utilizing Kubernetes and CDN"
+        ]
+      },
+      "trimble": {
+        "position": "DevOps Engineer",
+        "description": "Building and maintaining platform infrastructure to support development teams.",
+        "highlights": [
+          "Maintained pipelines, infrastructure, and built a platform team to help developers thrive",
+          "Deployed infrastructure using Terraform and Terragrunt",
+          "Worked with all main cloud providers to deliver the best experience for the development team"
+        ]
+      },
+      "arauco2": {
+        "position": "Support Analyst",
+        "description": "Network administration and infrastructure management.",
+        "highlights": [
+          "Network administrator dealing with firewall rules, network management, Wi-Fi improvement and placement projects",
+          "Major network configurations related to Azure servers, preparing and segmenting Azure networking for VPN connections"
+        ]
+      },
+      "arauco1": {
+        "position": "Administrative Assistant",
+        "description": "Network and telephony administration.",
+        "highlights": [
+          "Improved and managed telephony and network solutions",
+          "Managed provider invoices and uploaded information to SAP"
+        ]
+      },
+      "intern": {
+        "position": "Intern",
+        "description": "IT support and device management.",
+        "highlights": [
+          "Managed and fixed computers and devices. Participated actively in a project to update weighing scale software"
+        ]
+      }
+    }
   }
 }

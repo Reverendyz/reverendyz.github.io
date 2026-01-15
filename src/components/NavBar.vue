@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
+import { useI18n } from 'vue-i18n'
 
 const theme = useTheme()
+const { locale } = useI18n()
+
+const toggleLanguage = () => {
+  const newLocale = locale.value === 'en' ? 'pt' : 'en'
+  locale.value = newLocale
+  localStorage.setItem('locale', newLocale)
+}
 </script>
 
 <template>
@@ -12,16 +20,12 @@ const theme = useTheme()
       >
       <div class="d-flex flex-grow-1 align-center flex-wrap justify-center justify-md-end">
         <v-btn to="/" size="small" class="mx-1"> {{ $t('nav.home') }} </v-btn>
-        <v-btn to="/about" size="small" class="mx-1"> {{ $t('nav.about') }} </v-btn>
+        <v-btn to="/curriculum" size="small" class="mx-1"> {{ $t('nav.curriculum') }} </v-btn>
         <v-btn to="/projects" size="small" class="mx-1"> {{ $t('nav.projects') }} </v-btn>
-        <v-btn
-          variant="outlined"
-          size="small"
-          class="mx-1"
-          @click="$i18n.locale = $i18n.locale === 'en-US' ? 'pt-BR' : 'en-US'"
-        >
+        <v-btn to="/about" size="small" class="mx-1"> {{ $t('nav.about') }} </v-btn>
+        <v-btn variant="outlined" size="small" class="mx-1" @click="toggleLanguage">
           <span class="d-none d-sm-inline">
-            {{ $i18n.locale === 'en-US' ? 'PT-BR' : 'EN-US' }}
+            {{ locale === 'en' ? 'PT-BR' : 'EN-US' }}
           </span>
           <v-icon>mdi-translate</v-icon>
         </v-btn>
