@@ -40,7 +40,7 @@ const calculateAge = computed(() => {
 <template>
   <v-container class="my-5">
     <v-row>
-      <v-col cols="12" md="5" xs="12" class="text-center text-md-right mb-4">
+      <v-col cols="12" md="3" xs="12" class="text-center text-md-right mb-4">
         <v-avatar image="profile.jpeg" size="200" />
       </v-col>
       <v-col cols="12" md="7" xs="12" class="text-center text-md-left align-self-center mb-4">
