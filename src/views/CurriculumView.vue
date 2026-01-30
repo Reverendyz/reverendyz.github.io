@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n'
 const { t, tm } = useI18n()
 
 const experienceData = [
-  { key: 'vwb', period: 'Feb. 2026 – Current', company: 'Volkswagen Brazil' },
+  { key: 'vwb', period: 'Feb. 2026 – Current', company: 'Volkswagen Tech Brazil' },
   { key: 'freelancer', period: 'Oct. 2022 – Current', company: 'Freelancer' },
   { key: 'landis', period: 'Oct. 2024 – Feb. 2026', company: 'Landis+Gyr' },
   { key: 'trimble', period: 'Jul. 2022 – Sep. 2024', company: 'Trimble Inc.' },
@@ -40,19 +40,20 @@ const calculateAge = computed(() => {
 <template>
   <v-container class="my-5">
     <v-row>
-      <v-col cols="12" md="3" class="text-center text-md-right mb-4">
+      <v-col cols="12" md="5" xs="12" class="text-center text-md-right mb-4">
         <v-avatar image="profile.jpeg" size="200" />
       </v-col>
-      <v-col cols="12" md="7" class="text-center text-md-left align-self-center mb-4">
+      <v-col cols="12" md="7" xs="12" class="text-center text-md-left align-self-center mb-4">
         <h1>{{ $t('curriculum.title') }}</h1>
-        <p class="text-h6 text-medium-emphasis">
-          Felipe Moreira dos Santos - {{ calculateAge }}y - {{ $t('curriculum.subtitle') }}
-        </p>
+        <p class="text-h6 text-medium-emphasis">Felipe Santos - {{ calculateAge }}y</p>
         <p class="text-body-1 mt-3">
           {{ $t('curriculum.summary') }}
         </p>
         <p class="text-caption mt-3">
-          E-MAIL: <a href="mailto:fmsantos1997@hotmail.com"> fmsantos1997@hotmail.com </a>
+          <v-icon>mdi-email-outline </v-icon>
+          <a href="mailto:fmsantos1997@hotmail.com">fmsantos1997@hotmail.com </a>
+          <v-icon>mdi-linkedin </v-icon>
+          <a href="https://www.linkedin.com/in/06-fmsantos/">LinkedIn Profile</a>
         </p>
       </v-col>
       <v-col cols="9">
