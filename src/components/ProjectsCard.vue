@@ -12,9 +12,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <v-card class="mx-auto">
+  <v-card class="mx-auto" max-width="400">
     <v-img height="200px" :src="props.imgSrc" cover></v-img>
-
     <v-card-title>
       <a
         class="text-decoration-none"

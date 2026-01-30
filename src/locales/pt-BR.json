@@ -67,7 +67,9 @@
   },
   "curriculum": {
     "title": "Experiência Profissional",
-    "subtitle": "Minha jornada de carreira em DevOps e TI",
+    "subtitle": "Minha carreira como DevOps e TI",
+    "summary": "Procuro constantemente expandir minhas habilidades e conhecimentos em DevSecOps, desenvolvimento e arquitetura. Espalhando a cultura DevOps e promovendo práticas de segurança em todas as etapas do ciclo de vida do desenvolvimento de software.",
+    "stack": "Stack Tecnológica",
     "current": "Atual",
     "experience": {
       "vwb": {
@@ -75,7 +77,9 @@
         "description": "Liderando iniciativas de arquitetura de TI.",
         "highlights": [
           "Desenvolvimento de arquiteturas de soluções para projetos internos e clientes",
-          "Colaboração com equipes multifuncionais para garantir a implementação bem-sucedida das soluções propostas"
+          "Colaboração com equipes multifuncionais para garantir a implementação bem-sucedida das soluções propostas",
+          "Configuração e administração de Cluster Kubernetes local e AWS EKS",
+          "Implementação de pipelines CI/CD usando GitHub Actions e Terraform para automação de infraestrutura"
         ]
       },
       "landis": {
