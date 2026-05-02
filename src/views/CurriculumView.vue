@@ -40,10 +40,10 @@ const calculateAge = computed(() => {
 <template>
   <v-container class="my-5">
     <v-row>
-      <v-col cols="12" md="3" xs="12" class="text-center text-md-right mb-4">
+      <v-col cols="12" md="3" class="text-center text-md-right mb-4">
         <v-avatar image="profile.jpeg" size="200" />
       </v-col>
-      <v-col cols="12" md="7" xs="12" class="text-center text-md-left align-self-center mb-4">
+      <v-col cols="12" md="7" class="text-center text-md-left align-self-center mb-4">
         <h1>{{ $t('curriculum.title') }}</h1>
         <p class="text-h6 text-medium-emphasis">Felipe Santos - {{ calculateAge }}y</p>
         <p class="text-body-1 mt-3">
@@ -56,7 +56,8 @@ const calculateAge = computed(() => {
           <a href="https://www.linkedin.com/in/06-fmsantos/">LinkedIn Profile</a>
         </p>
       </v-col>
-      <v-col cols="9">
+
+      <v-col cols="12" md="9">
         <v-timeline side="end" align="start" class="custom-timeline">
           <v-timeline-item
             v-for="(item, index) in experienceItems"
@@ -65,7 +66,10 @@ const calculateAge = computed(() => {
             size="small"
           >
             <template v-slot:opposite>
-              <div class="text-h6 font-weight-bold" :class="item.isCurrent ? 'text-primary' : ''">
+              <div
+                class="text-h6 font-weight-bold d-none d-md-flex"
+                :class="item.isCurrent ? 'text-primary' : ''"
+              >
                 {{ item.period }}
               </div>
             </template>
@@ -84,6 +88,9 @@ const calculateAge = computed(() => {
               </v-card-title>
               <v-card-subtitle class="text-h6 mt-1">
                 {{ item.company }}
+                <span class="d-inline d-md-none text-caption ml-2 text-medium-emphasis">
+                  · {{ item.period }}
+                </span>
               </v-card-subtitle>
               <v-card-text>
                 <p class="mb-3">{{ item.description }}</p>
@@ -104,112 +111,73 @@ const calculateAge = computed(() => {
           </v-timeline-item>
         </v-timeline>
       </v-col>
-      <v-col md="3" sm="12" xs="12" class="text-center align-center mt-8">
+
+      <v-col cols="12" md="3" class="text-center align-center mt-8">
         <h3 class="text-h6 mb-4">{{ $t('curriculum.stack') }}</h3>
         <div class="d-flex flex-column align-center ga-2">
-          Tools
-          <v-chip prepend-icon="mdi-docker" variant="tonal" size="small" class="tech-chip">
-            Docker
-          </v-chip>
-          <v-chip prepend-icon="mdi-kubernetes" variant="tonal" size="small" class="tech-chip">
-            Kubernetes
-          </v-chip>
-          <v-chip prepend-icon="mdi-kubernetes" variant="tonal" size="small" class="tech-chip">
-            Helm
-          </v-chip>
-          <v-chip prepend-icon="mdi-terraform" variant="tonal" size="small" class="tech-chip">
-            Terraform
-          </v-chip>
-          <v-chip prepend-icon="mdi-ansible" variant="tonal" size="small" class="tech-chip">
-            Ansible
-          </v-chip>
-          <v-chip prepend-icon="mdi-git" variant="tonal" size="small" class="tech-chip">
-            Git
-          </v-chip>
-          <v-chip prepend-icon="mdi-microsoft-azure" variant="tonal" size="small" class="tech-chip">
-            Azure Pipelines
-          </v-chip>
-          <v-chip prepend-icon="mdi-github" variant="tonal" size="small" class="tech-chip">
-            Github Actions
-          </v-chip>
-          <v-chip prepend-icon="mdi-gitlab" variant="tonal" size="small" class="tech-chip">
-            Buildkite
-          </v-chip>
-          <v-chip
-            prepend-icon="mdi-arrow-decision-auto-outline"
-            variant="tonal"
-            size="small"
-            class="tech-chip"
-          >
-            Jenkins
-          </v-chip>
-          <v-chip prepend-icon="mdi-google-cloud" variant="tonal" size="small" class="tech-chip">
-            Google Cloud Platform
-          </v-chip>
-          <v-chip prepend-icon="mdi-microsoft-azure" variant="tonal" size="small" class="tech-chip">
-            Azure
-          </v-chip>
-          <v-chip prepend-icon="mdi-aws" variant="tonal" size="small" class="tech-chip">
-            Amazon Web Services
-          </v-chip>
-          <v-chip prepend-icon="mdi-monitor-eye" variant="tonal" size="small" class="tech-chip">
-            Grafana
-          </v-chip>
-          <v-chip prepend-icon="mdi-apache-kafka" variant="tonal" size="small" class="tech-chip">
-            Kafka
-          </v-chip>
-          <v-chip prepend-icon="mdi-rabbit" variant="tonal" size="small" class="tech-chip">
-            RabbitMQ
-          </v-chip>
-          <v-chip
-            prepend-icon="mdi-arrow-decision-outline"
-            variant="tonal"
-            size="small"
-            class="tech-chip"
-          >
-            NGINX
-          </v-chip>
-          Languages
-          <v-chip prepend-icon="mdi-language-go" variant="tonal" size="small" class="tech-chip">
-            Golang
-          </v-chip>
-          <v-chip prepend-icon="mdi-language-python" variant="tonal" size="small" class="tech-chip">
-            Python
-          </v-chip>
-          <v-chip
-            prepend-icon="mdi-language-typescript"
-            variant="tonal"
-            size="small"
-            class="tech-chip"
-          >
-            TypeScript
-          </v-chip>
-          <v-chip prepend-icon="mdi-language-java" variant="tonal" size="small" class="tech-chip">
-            Java
-          </v-chip>
-          <v-chip prepend-icon="mdi-language-c" variant="tonal" size="small" class="tech-chip">
-            C
-          </v-chip>
-          Scripting
-          <v-chip prepend-icon="mdi-bash" variant="tonal" size="small" class="tech-chip">
-            Bash
-          </v-chip>
-          <v-chip prepend-icon="mdi-language-python" variant="tonal" size="small" class="tech-chip">
-            Python
-          </v-chip>
-          Misc
-          <v-chip prepend-icon="mdi-vuejs" variant="tonal" size="small" class="tech-chip">
-            VueJS
-          </v-chip>
-          <v-chip prepend-icon="mdi-react" variant="tonal" size="small" class="tech-chip">
-            React
-          </v-chip>
-          <v-chip prepend-icon="mdi-language-java" variant="tonal" size="small" class="tech-chip">
-            SpringBoot
-          </v-chip>
-          <v-chip prepend-icon="mdi-material-design" variant="tonal" size="small" class="tech-chip">
-            Material UI
-          </v-chip>
+          <span class="text-overline font-weight-bold text-medium-emphasis mt-2">Tools</span>
+          <div class="d-flex flex-wrap justify-center ga-2">
+            <v-chip prepend-icon="mdi-docker" variant="tonal" size="small">Docker</v-chip>
+            <v-chip prepend-icon="mdi-kubernetes" variant="tonal" size="small">Kubernetes</v-chip>
+            <v-chip prepend-icon="mdi-kubernetes" variant="tonal" size="small">Helm</v-chip>
+            <v-chip prepend-icon="mdi-terraform" variant="tonal" size="small">Terraform</v-chip>
+            <v-chip prepend-icon="mdi-ansible" variant="tonal" size="small">Ansible</v-chip>
+            <v-chip prepend-icon="mdi-git" variant="tonal" size="small">Git</v-chip>
+            <v-chip prepend-icon="mdi-microsoft-azure" variant="tonal" size="small">
+              Azure Pipelines
+            </v-chip>
+            <v-chip prepend-icon="mdi-github" variant="tonal" size="small">
+              Github Actions
+            </v-chip>
+            <v-chip prepend-icon="mdi-gitlab" variant="tonal" size="small">Buildkite</v-chip>
+            <v-chip
+              prepend-icon="mdi-arrow-decision-auto-outline"
+              variant="tonal"
+              size="small"
+            >
+              Jenkins
+            </v-chip>
+            <v-chip prepend-icon="mdi-google-cloud" variant="tonal" size="small">
+              Google Cloud Platform
+            </v-chip>
+            <v-chip prepend-icon="mdi-microsoft-azure" variant="tonal" size="small">Azure</v-chip>
+            <v-chip prepend-icon="mdi-aws" variant="tonal" size="small">
+              Amazon Web Services
+            </v-chip>
+            <v-chip prepend-icon="mdi-monitor-eye" variant="tonal" size="small">Grafana</v-chip>
+            <v-chip prepend-icon="mdi-apache-kafka" variant="tonal" size="small">Kafka</v-chip>
+            <v-chip prepend-icon="mdi-rabbit" variant="tonal" size="small">RabbitMQ</v-chip>
+            <v-chip prepend-icon="mdi-arrow-decision-outline" variant="tonal" size="small">
+              NGINX
+            </v-chip>
+          </div>
+
+          <span class="text-overline font-weight-bold text-medium-emphasis mt-2">Languages</span>
+          <div class="d-flex flex-wrap justify-center ga-2">
+            <v-chip prepend-icon="mdi-language-go" variant="tonal" size="small">Golang</v-chip>
+            <v-chip prepend-icon="mdi-language-python" variant="tonal" size="small">Python</v-chip>
+            <v-chip prepend-icon="mdi-language-typescript" variant="tonal" size="small">
+              TypeScript
+            </v-chip>
+            <v-chip prepend-icon="mdi-language-java" variant="tonal" size="small">Java</v-chip>
+            <v-chip prepend-icon="mdi-language-c" variant="tonal" size="small">C</v-chip>
+          </div>
+
+          <span class="text-overline font-weight-bold text-medium-emphasis mt-2">Scripting</span>
+          <div class="d-flex flex-wrap justify-center ga-2">
+            <v-chip prepend-icon="mdi-bash" variant="tonal" size="small">Bash</v-chip>
+            <v-chip prepend-icon="mdi-language-python" variant="tonal" size="small">Python</v-chip>
+          </div>
+
+          <span class="text-overline font-weight-bold text-medium-emphasis mt-2">Misc</span>
+          <div class="d-flex flex-wrap justify-center ga-2">
+            <v-chip prepend-icon="mdi-vuejs" variant="tonal" size="small">VueJS</v-chip>
+            <v-chip prepend-icon="mdi-react" variant="tonal" size="small">React</v-chip>
+            <v-chip prepend-icon="mdi-language-java" variant="tonal" size="small">SpringBoot</v-chip>
+            <v-chip prepend-icon="mdi-material-design" variant="tonal" size="small">
+              Material UI
+            </v-chip>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -223,9 +191,5 @@ const calculateAge = computed(() => {
 
 .border-primary {
   border: 2px solid rgb(var(--v-theme-primary));
-}
-
-.tech-chip {
-  width: 200px;
 }
 </style>

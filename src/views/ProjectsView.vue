@@ -45,7 +45,7 @@ const cards = [
         lg="4"
         md="6"
         sm="12"
-        xl="12"
+        xl="3"
         class="text-center mb-4 mb-sm-8 px-2 px-sm-4"
       >
         <projects-card

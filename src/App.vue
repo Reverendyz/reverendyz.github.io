@@ -6,7 +6,7 @@ import PageFooter from './components/PageFooter.vue'
 <template>
   <v-app>
     <nav-bar />
-    <v-main class="mx-auto d-flex align-center justify-center">
+    <v-main>
       <router-view />
     </v-main>
     <page-footer />
